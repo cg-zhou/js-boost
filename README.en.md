@@ -24,7 +24,9 @@ Check out the [live examples](https://cg-zhou.github.io/js-booster/examples) or 
 
 ## Note
 
-Browsers have a maximum height limit for DOM elements (typically in the tens of millions of pixels, varying by browser). When dealing with extremely large datasets (e.g., millions of items), the calculated total height might exceed this limit. This can cause the native scrollbar to behave unexpectedly (e.g., a small drag scrolls through a large amount of content). `js-booster` internally mitigates this rendering issue by scaling the content height, but the scrollbar interaction experience may still be affected for such massive datasets.
+**DOM element height**: Browsers have a maximum height limit for a single DOM element (usually tens of millions of pixels, varying by browser). When the data volume reaches millions or more, the calculated total height may exceed this limit, causing the scrollbar movement to become disproportionate to the actual content. `js-booster` handles this by scaling the height, but in extreme cases, the scrolling experience may still be affected.
+
+**Only fixed itemHeight is supported**: Currently, only fixed itemHeight for all list items is supported. Dynamic item heights are not supported.
 
 ## Installation
 
